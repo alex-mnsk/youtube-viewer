@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* { margin: 0; padding: 0; }
+
+body {
+  position: relative;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  font-family: "Lato";
+}
+
+header {
+  position: relative;
+  height: 60px;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.fa {
+  color:#d76236;
+}
+
+.fa-search {
+  position: absolute;
+  text-indent:  -40px;
+  color: #008f7d;
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 56px;
+}
+
+.cards-container {
+  position: absolute;
+  margin-top: 10px;
+  width: 100%;
+  height: 580px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card-container {
+  display: inline-block;
+  margin: 10px 10px 0 10px;
+  padding-top: 20px;
+  width: 320px;
+  height: 510px;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 16px black;
+  background-color: ghostwhite;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  color: #666666;
+  animation: fadein 500ms;
+  -moz-animation: fadein 500ms;
+  -webkit-animation: fadein 500ms;
+  -o-animation: fadein 500ms;
+}
+
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card-container {
+  opacity: 1;
+  transition-property: visibility;
+}
+
+.card-container p {
+  margin-top: 10px;
+}
+
+.card-container a {
+  color: ghostwhite;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.card-container a:hover {
+  color: #ad4738;
+}
+
+.title {
+  height: 42px;
+  background-color: #008f7d;
+  overflow: hidden;
+}
+
+.card-container:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+img {
+  height: 180px;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+input[type=text], textarea {
+  position: relative;
+  width: 260px;
+  height: 26px;
+  border-radius: 20px;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: inherit;
+  padding: 3px 0px 3px 30px;
+  margin: 10px 1px 10px auto;
+  border: 2px solid #DDDDDD;
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 10px #008f7d;
+  padding: 3px 0px 3px 30px;
+  margin: 10px 1px 10px auto;
+  border: 2px solid #008f7d;
+  width: 280px;
+  font-size: 16px;
+  color: #008f7d;
+}
+
+.pagination {
+  width: 100%;
+  height: 24px;
+  margin-top: 580px;
+  text-align: center;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  cursor: default;
+}
+
+li {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: ghostwhite;
+  -webkit-box-shadow:0 0 30px black;
+
+}
+
+span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  line-height: 20px;
+  border-radius: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+  font-size: 11px;
+  font-weight: 900;
+  color: #d76236;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.description {
+  overflow: hidden;
+}
+
+.page-1 span {
+  background-color: #d76236;
+  color: ghostwhite;
+}
+#next:hover,
+#prev:hover {
+  background-color: #d76236;
+  color: ghostwhite;
+}
+
+.link a{
+  font-size: 16px;
+}
+
+.link p:not(:first-child) {
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .page-1 span {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 414px) {
+  header {
+    text-align: center;
+    background-color: black;
+  }
+  .cards-container {
+    position: absolute;
+    margin-top: 10px;
+    width: 100%;
+    height: 450px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .card-container {
+    width: 300px;
+    height: 410px;
+  }
+
+  .pagination {
+    margin-top: 470px;
+  }
+
+}
